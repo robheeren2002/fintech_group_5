@@ -1,0 +1,17 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="48" fill="#F7F4FF"/>
+  <circle cx="120" cy="95" r="56" fill="url(#grad)" opacity="0.95"/>
+  <path d="M45 203C59 164 86 144 120 144C154 144 181 164 195 203" fill="url(#grad2)" opacity="0.92"/>
+  <circle cx="171" cy="58" r="13" fill="#ffffff" fill-opacity="0.72"/>
+  <text x="120" y="105" text-anchor="middle" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#ffffff">ZL</text>
+  <defs>
+    <linearGradient id="grad" x1="55" y1="29" x2="177" y2="163" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8f49ff"/>
+      <stop offset="1" stop-color="#dbb8ff"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="45" y1="144" x2="195" y2="203" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8f49ff"/>
+      <stop offset="1" stop-color="#dbb8ff"/>
+    </linearGradient>
+  </defs>
+</svg>
