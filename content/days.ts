@@ -10,50 +10,54 @@ const q = (
 
 export const days: DayContent[] = [
   {
-    slug: 'day-1',
-    dayNumber: 1,
-    title: 'Day 1: Open Banking, Banking as a Service (BaaS) & Platform Economics',
-    tag: 'Foundations',
-    intro:
-      'Our first reset was simple but important: fintech is not just better-looking banking. It changes distribution, trust, and the infrastructure people rarely notice.',
-    takeaway:
-      'The shift was from “nicer interface” to “different market logic”.',
-    levels: [
-      {
-        level: 'easy',
-        title: 'Easy — spotting the basics',
-        questions: [
-          q('d1-e1', 'Which statement best captures a common fintech promise?', ['Make services more convenient and accessible', 'Remove all regulation', 'Replace every bank branch instantly', 'Guarantee higher returns'], 0, 'Fintech often wins first on convenience and accessibility. The other options overstate what it can realistically do.'),
-          q('d1-e2', 'Why does trust matter so much in finance?', ['Because finance is mainly entertainment', 'Because money decisions involve risk, privacy, and consequence', 'Because customers never compare providers', 'Because design is irrelevant'], 1, 'Finance involves sensitive data and high-stakes outcomes, so trust becomes a foundational layer rather than a nice extra.'),
-          q('d1-e3', 'A digital wallet is mainly used to:', ['Store physical cash', 'Hold payment credentials for digital transactions', 'Issue mortgages automatically', 'Replace central banks'], 1, 'Digital wallets hold credentials or connect to accounts so users can pay digitally with less friction.'),
-          q('d1-e4', 'Why do many users adopt fintech products quickly?', ['Because all fintech is free forever', 'Because onboarding and everyday use often feel simpler', 'Because regulation forces switching', 'Because branches are banned'], 1, 'A smoother experience, clearer flows, and faster signup often explain adoption better than grand structural claims.'),
-          q('d1-e5', 'Which is part of the fintech ecosystem?', ['Payment processors', 'Only commercial banks', 'Only crypto miners', 'Only telecom firms'], 0, 'Fintech ecosystems are broad, and payment processors are one of the key infrastructure layers inside them.')
-        ]
-      },
-      {
-        level: 'medium',
-        title: 'Medium — following the dynamics',
-        questions: [
-          q('d1-m1', 'Why is fintech often described as changing distribution more than the existence of finance itself?', ['Because people stop needing finance', 'Because the needs stay, but channels and intermediaries shift', 'Because regulation bans new products', 'Because only crypto counts as innovation'], 1, 'Payments, credit, and savings still exist. What changes is how they are delivered and who controls the customer relationship.'),
-          q('d1-m2', 'A neobank often gains traction by:', ['Owning the central bank balance sheet', 'Offering sharper UX and focused propositions', 'Avoiding any compliance need', 'Eliminating all costs'], 1, 'Neobanks tend to win on focus and experience, not by escaping the realities of finance.'),
-          q('d1-m3', 'Why can a beautiful fintech product still fail?', ['Because design never matters', 'Because only old brands win', 'Because weak economics, trust, or infrastructure can break the model', 'Because users dislike convenience'], 2, 'Finance products need durable economics and resilient operations as much as they need great UX.'),
-          q('d1-m4', 'What does “the plumbing of finance” usually mean?', ['Marketing campaigns', 'Hidden infrastructure such as settlement and identity rails', 'Office furniture', 'Social media sentiment'], 1, 'The phrase points to the infrastructure underneath visible products, such as settlement, KYC, and connectivity.'),
-          q('d1-m5', 'Why do incumbents still matter in fintech stories?', ['They hold licenses, balance sheets, and trusted relationships', 'They are the only firms that can build software', 'They never collaborate', 'They cannot transform'], 0, 'Incumbents remain powerful because they control important assets that are difficult to reproduce quickly.')
-        ]
-      },
-      {
-        level: 'hard',
-        title: 'Hard — beyond the app layer',
-        questions: [
-          q('d1-h1', 'Which strategic question reflects a deeper fintech analysis?', ['Is the app trendy?', 'Who owns the customer relationship and who carries the risk?', 'Can every product become a meme?', 'How fast can branches vanish?'], 1, 'This question surfaces the structural split between distribution, compliance, and value capture.'),
-          q('d1-h2', 'A fintech scales rapidly but depends on a partner bank. What tension appears?', ['Growth and control can sit in different firms', 'There is no tension', 'The fintech becomes a central bank', 'Trust stops mattering'], 0, 'When distribution and regulated activity live in different places, strategic dependence becomes a real issue.'),
-          q('d1-h3', 'Why is convenience not the whole story?', ['Because convenience is always harmful', 'Because it can hide lock-in, opacity, or nudges', 'Because customers prefer friction', 'Because it is illegal'], 1, 'A smoother experience can coexist with poor incentives or weak transparency.'),
-          q('d1-h4', 'Why does ecosystem thinking matter in fintech?', ['Because no single player usually controls licenses, data, infrastructure, and distribution at once', 'Because ecosystems are just marketing', 'Because partnerships never matter', 'Because regulators ignore ecosystems'], 0, 'Fintech value is often created through layered partnerships rather than one firm owning every part of the stack.'),
-          q('d1-h5', 'What changed most in our understanding on Day 1?', ['We concluded fintech is mainly branding', 'We stopped caring about trust', 'We began seeing fintech as a shift in structure and responsibility', 'We assumed every bank would vanish'], 2, 'The first day moved the conversation from interface polish to incentives, market structure, and trust architecture.')
-        ]
-      }
-    ]
-  },
+  slug: 'day-1',
+  dayNumber: 1,
+  title: 'Day 1: Platform Power Game',
+  tag: 'Payments, Platforms, Infrastructure, Ecosystems',
+  intro:
+    '**Monday changed how we think about power in payments.**\n' +
+    'The biggest shift for us was realizing that the real battle in fintech is not only about building the best infrastructure. It is about who controls the interface, the customer relationship, and the data generated through that relationship. That makes platform power just as important, and often more important, than the rails underneath.\n\n' +
+    'This also changed how we see firms like Apple Pay, Google Pay, and PayPal. They are not just convenient layers sitting on top of payments infrastructure. They can become the most powerful actors in the system because they own the customer touchpoint while others compete to provide the invisible plumbing behind them.\n\n' +
+    'Another key idea for us was that fintech no longer fits a simple disruption story. The assumption that startups would replace banks turned out to be too narrow. In practice, many fintechs and banks became complementary because banks still control licenses, capital, trust, and distribution, while fintechs often specialize in speed, focus, and user experience.\n\n' +
+    'Overall, Monday made us see the payments battlefield as a struggle over ecosystem control. The central question is not only which infrastructure wins, but who captures the relationship around it.\n\n',
+  takeaway:
+    'In payments, controlling the interface and the customer relationship can matter more than owning the rails underneath.',
+  levels: [
+    {
+      level: 'easy',
+      title: 'Easy',
+      questions: [
+        q('d1-e1', 'In the payments ecosystem, what does "platform power" refer to?', ['The ability to process transactions faster than competitors', 'The ability to own the customer interface and relationship, regardless of underlying infrastructure', 'The total transaction volume a company can handle', 'The number of employees a fintech company employs'], 1, 'Platform power means controlling the customer touchpoint and relationship, even if another party provides the infrastructure underneath.'),
+        q('d1-e2', 'Which of the following is NOT an example of a platform in payments?', ['Apple Pay', 'Google Pay', 'Wero', 'PayPal'], 2, 'In this framing, Wero is primarily infrastructure-oriented, while Apple Pay, Google Pay, and PayPal are customer-facing platforms.'),
+        q('d1-e3', 'In the Payments Battlefield context, why does BigTech matter?', ['They have more money than banks', 'They own billions of devices and the customer interface for payments', 'They have better engineers', 'They don\'t face regulation'], 1, 'BigTech matters because control over devices and customer interfaces gives it strategic leverage in payments.'),
+        q('d1-e4', 'What is the role of SEPA Instant in the Wero story?', ['A European law that restricts payments', 'The infrastructure or rails that Wero is built on for instant settlement', 'A competing payment app', 'A blockchain network'], 1, 'SEPA Instant provides the underlying settlement infrastructure that enables Wero\'s payment model.'),
+        q('d1-e5', 'Which statement best describes the difference between Visa or Mastercard and Apple Pay?', ['They do the same thing', 'Visa or Mastercard own the infrastructure; Apple Pay owns the customer interface', 'Apple Pay is cheaper', 'Visa or Mastercard own the interface; Apple Pay owns the infrastructure'], 1, 'Visa and Mastercard are infrastructure and network players, while Apple Pay is primarily an interface and relationship layer.')
+      ]
+    },
+    {
+      level: 'medium',
+      title: 'Medium',
+      questions: [
+        q('d1-m1', 'According to the FinTech landscape presentation, what shift happened from Wave 2 to Wave 3 in fintech?', ['Banks disappeared', 'The industry moved from disruption narratives to partnership and ecosystem models', 'Blockchain replaced all traditional banking', 'Regulations made fintech illegal'], 1, 'The shift was from a pure disruption narrative toward partnerships, ecosystems, and layered collaboration.'),
+        q('d1-m2', 'In the ecosystem model presented, what defines an "Orchestrator"?', ['Someone who regulates financial services', 'A player who owns the customer relationship and assembles a best-of-breed ecosystem around it', 'Someone who builds payment infrastructure', 'A bank'], 1, 'An orchestrator controls the relationship and coordinates multiple specialized providers around the customer.'),
+        q('d1-m3', 'Why is platform power potentially a threat to Wero according to the analysis?', ['Wero does not have enough money', 'Even if Wero builds better infrastructure, if Apple, Google, or PayPal sits between Wero and the customer, those platforms capture the primary relationship', 'Regulations prevent Wero from operating', 'Visa and Mastercard are too big'], 1, 'The risk is that superior infrastructure still becomes invisible if another player owns the customer touchpoint.'),
+        q('d1-m4', 'What is the "consent model" that Wero introduced?', ['Permission from regulators to operate in Europe', 'A framework where payments are understood as agreements between merchants and consumers, enabling loyalty, identity, and flexible payment options', 'A way to get customer consent to share data with banks', 'A model only used in Germany'], 1, 'The consent model broadens payments beyond simple transaction execution toward richer interaction between merchant and customer.'),
+        q('d1-m5', 'According to the FinTech landscape, what drives the shift from specialization to rebundling?', ['App fatigue and the demand for simplicity and integration', 'Banks getting stronger', 'Regulations forcing mergers', 'Bitcoin becoming mainstream'], 0, 'As users tire of fragmented apps, firms gain an incentive to rebundle services into broader ecosystems.')
+      ]
+    },
+    {
+      level: 'hard',
+      title: 'Hard',
+      questions: [
+        q('d1-h1', 'What is the strategic tension between Wero and BigTech platforms, and what is it fundamentally about?', ['Technology superiority', 'Who owns the customer relationship and controls the margin pool: infrastructure providers like Wero versus interface owners like Apple or Google', 'Regulatory compliance', 'Transaction speed'], 1, 'The core issue is not only technology, but who captures the customer relationship and economic value.'),
+        q('d1-h2', 'Based on the ecosystem architecture framework, if Wero becomes white-labeled inside Apple Pay, what role would Wero play?', ['Orchestrator', 'Specialist', 'Infrastructure Enabler', 'Incumbent as Platform'], 2, 'If Wero becomes invisible underneath another interface, it functions as an infrastructure enabler rather than the primary orchestrator.'),
+        q('d1-h3', 'The presentation suggests that the "disruption narrative" of 2010 to 2017 cracked. Which explanation best fits why?', ['Fintechs failed technically', 'Customer acquisition costs exploded, trust gaps persisted for serious money, and banks held licenses, capital, and distribution that fintechs needed, so partnership became the rational model', 'Banks were too fast at adapting', 'Governments banned fintech'], 1, 'The economics of scale, trust, regulation, and customer acquisition made partnership more rational than simple replacement.'),
+        q('d1-h4', 'In Wero\'s consumer research, what was the key finding about willingness to use Wero in Belgium?', ['Only 5% of Belgians were willing', '65% of Belgians were willing to use Wero', 'Belgians preferred existing payment methods', 'Young people rejected Wero'], 1, 'The research highlighted a relatively high willingness to use Wero in Belgium.'),
+        q('d1-h5', 'Which scenario represents the highest strategic risk for Wero\'s long-term independence?', ['Visa and Mastercard remain dominant', 'Fintechs continue to innovate at rapid pace', 'BigTech platforms like Apple, Google, or PayPal embed Wero as a white-labeled backend while controlling the customer interface', 'European regulation becomes stricter'], 2, 'The greatest risk is becoming dependent, invisible infrastructure beneath stronger customer-facing platforms.')
+      ]
+    }
+  ]
+},
 {
   slug: 'day-2',
   dayNumber: 2,

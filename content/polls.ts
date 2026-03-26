@@ -2,35 +2,67 @@ import type { PollSeed } from '@/types';
 
 export const pollSeeds: PollSeed[] = [
   {
-    slug: 'd1-trust-advantage',
-    daySlug: 'day-1',
-    position: 1,
-    question: 'What gives a fintech the strongest early advantage: better UX, lower fees, or stronger trust signals?',
-    options: ['Better UX', 'Lower fees', 'Stronger trust signals', 'It depends on the segment'],
-    explanationPerOption: [
-      'From a startup lens, better UX can be the fastest wedge into a tired category.',
-      'From a customer lens, price matters a lot when products feel similar on the surface.',
-      'From a bank or regulator lens, trust signals may outweigh novelty because money is high-stakes.',
-      'From a strategy lens, the right answer changes by segment, use case, and customer need.'
-    ],
-    afterVoteSummary:
-      'This poll captures a core Day 1 lesson: fintech competition is not one-dimensional. Experience, trust, and economics matter in different ways depending on the problem being solved.'
-  },
-  {
-    slug: 'd1-incumbents-vs-challengers',
-    daySlug: 'day-1',
-    position: 2,
-    question: 'By 2030, who will own the most valuable customer relationship in everyday finance?',
-    options: ['Traditional banks', 'Neobanks', 'BigTech platforms', 'A mixed ecosystem'],
-    explanationPerOption: [
-      'Banks still hold licenses, infrastructure, and a deep trust reserve in many markets.',
-      'Neobanks may keep winning on experience and niche focus where daily engagement matters.',
-      'BigTech has reach, data, and distribution if regulation leaves enough room.',
-      'A mixed ecosystem may be most realistic because different players can dominate different moments.'
-    ],
-    afterVoteSummary:
-      'The bigger question is not simply who wins, but whether the customer relationship fragments across contexts like salary, commerce, budgeting, and lending.'
-  },
+  slug: 'd1-platform-power-2035',
+  daySlug: 'day-1',
+  position: 1,
+  question: 'Who will ultimately control the customer relationship in European payments by 2035?',
+  options: [
+    'Traditional banks: KBC, ING, BNP Paribas Fortis',
+    'European payment infrastructure: Wero or EPI',
+    'BigTech platforms: Apple, Google, Amazon',
+    'A hybrid ecosystem: no single player dominates'
+  ],
+  explanationPerOption: [
+    'This assumes incumbents can defend their customer relationships even if infrastructure and interfaces continue to fragment.',
+    'This view bets on European infrastructure becoming strategically important enough to shape the relationship layer as well.',
+    'This aligns with the platform power thesis: the player that owns devices and interfaces can capture the relationship even without owning the rails.',
+    'This is the most balanced answer, although even hybrid systems often still concentrate power within certain layers.'
+  ],
+  afterVoteSummary:
+    'Monday pushed us to distinguish clearly between infrastructure, interface, and relationship. Even if multiple players remain active, the deepest strategic question is which layer ends up capturing the strongest customer lock-in.'
+},
+{
+  slug: 'd1-wero-five-years',
+  daySlug: 'day-1',
+  position: 2,
+  question: 'In five years, what do you think Wero will be?',
+  options: [
+    'A dominant independent payment infrastructure controlling 30% or more of European transactions',
+    'White-labeled inside BigTech platforms and mostly invisible to end users',
+    'A specialist player strong in core markets but not Europe-wide',
+    'Acquired or merged into a larger player',
+    'Significantly weakened or discontinued'
+  ],
+  explanationPerOption: [
+    'This assumes Wero can pair infrastructure strength with enough distribution and visibility to stay independent at scale.',
+    'This is strategically coherent if Wero becomes the preferred rails while BigTech continues to own the customer interface.',
+    'This reflects a middle path where Wero matters regionally without becoming the defining European standard.',
+    'This sees payments as a consolidation story, where scale and coordination eventually force larger combinations.',
+    'This assumes Wero loses momentum either in execution, adoption, or strategic support.'
+  ],
+  afterVoteSummary:
+    'A core tension from Monday is that infrastructure success does not necessarily mean brand visibility or customer ownership. Wero could become highly important and still remain mostly invisible to the end user.'
+},
+{
+  slug: 'd1-regulate-bigtech-payments',
+  daySlug: 'day-1',
+  position: 3,
+  question: 'Should European regulators actively limit Apple, Google, and Amazon in payment interfaces?',
+  options: [
+    'Yes: they pose a strategic threat to European autonomy',
+    'Yes: but only if they abuse market power',
+    'No: consumer convenience and competition matter more',
+    'No clear position: the trade-offs are too complex'
+  ],
+  explanationPerOption: [
+    'This prioritizes sovereignty, control over data flows, and long-term strategic independence in payments.',
+    'This reflects a more conditional approach where regulators intervene only when dominance becomes abusive.',
+    'This prioritizes consumer outcomes and innovation speed over industrial policy concerns.',
+    'This recognizes that the issue involves trade-offs between efficiency, innovation, regulation, and sovereignty.'
+  ],
+  afterVoteSummary:
+    'Monday made clear that payments are not only a technology issue. They are also about governance, dependency, and who gets to shape the rules of the ecosystem over time.'
+},
   {
   slug: 'd2-embedded-finance-winner',
   daySlug: 'day-2',

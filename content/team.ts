@@ -7,10 +7,17 @@ export const teamMembers: TeamMember[] = [
     role: 'MFM',
     image: '/avatars/duraiz.jpg',
     beforeReflection:
-      'I walked in assuming fintech was mostly slicker banking apps. My mental model was interface-first: make payments faster, make onboarding easier, and the rest follows.',
+    'Before the bootcamp, I thought fintech was mainly about apps like Revolut or Wise: digital banking that made financial services faster, cheaper, and easier to use. The story seemed fairly straightforward to me. Tech startups were disrupting slow, legacy banks, and if they built a better user experience on mobile, they would eventually replace them.\n\n' +
+    'I also did not really understand the infrastructure layer. I saw payment apps as the whole story and did not grasp that every payment depends on underlying rails such as Visa, SEPA Instant, or blockchain. I had not yet realized that control over this plumbing can matter just as much as the app the customer sees.\n\n' +
+    'In the same way, I underestimated the role of platforms like Apple Pay, Google Pay, and PayPal. I saw them mostly as interfaces sitting on top of existing systems, not as strategic actors that could control the customer relationship while others competed underneath.\n\n' +
+    'So my view of fintech was not completely wrong, but it was still very surface-level and too focused on disruption as a simple startup-versus-bank story.',
     afterReflection:
-      'I left seeing fintech as a power shift in distribution, trust, and infrastructure. The interface still matters, but the bigger game is who owns the customer relationship and who absorbs the regulatory burden.'
-  },
+    'After this week, I see fintech as much more complex and much more strategic than I first thought. It is not just' +
+        ' about disruption or better apps, but about who controls three critical layers at once: the infrastructure, the customer experience, and the relationship with the user.\n\n' +
+    'What changed most for me is the realization that platform power can matter more than infrastructure itself. Even if one player provides the rails underneath, the company that owns the interface and customer touchpoint can still capture the relationship, the data, and a large share of the value. That made companies like Apple Pay, Google Pay, and PayPal look very different to me.\n\n' +
+    'I also now understand why the original disruption narrative weakened over time. Fintechs did not simply replace banks. Instead, partnerships became the more rational model because banks still hold licenses, capital, trust, and distribution, while fintechs often bring speed, focus, and better user experiences.\n\n' +
+    'Overall, I now see fintech less as a direct battle between startups and banks, and more as a power struggle over layers within a broader ecosystem.'
+},
 {
   id: 'Vyom',
   name: 'Vyom Chhabra',

@@ -127,14 +127,15 @@ export function ReflectionCard({ member }: Props) {
             </div>
 
             {!expanded && canExpand && (
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 rounded-b-[20px] bg-gradient-to-t from-violet-50/95 via-violet-50/80 to-transparent" />
+                <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-violet-50/95 via-violet-50/80 to-transparent"/>
             )}
           </div>
 
           {!expanded && canExpand && (
-            <button
-              type="button"
-              onClick={() => setExpanded(true)}
+              <button
+                  type="button"
+                  onClick={() => setExpanded(true)}
               className="mt-5 inline-flex items-center rounded-full border border-violet-200 px-4 py-2 text-sm font-semibold text-violet-700 transition hover:border-violet-300 hover:bg-violet-100"
             >
               Read more
