@@ -71,7 +71,7 @@ export function QuizCard({ quizLevel }: { quizLevel: QuizLevel }) {
           </div>
           {selectedIndex !== null ? (
             <div className="space-y-4 rounded-3xl border border-plum-100 bg-panel-gradient p-5">
-              <p className={cn('text-sm font-semibold', selectedIndex === question.correctIndex ? 'text-emerald-700' : 'text-rose-700')}>{selectedIndex === question.correctIndex ? 'Correct — nice catch.' : 'Not quite — here is the reasoning.'}</p>
+              <p className={cn('text-sm font-semibold', selectedIndex === question.correctIndex ? 'text-emerald-700' : 'text-rose-700')}>{selectedIndex === question.correctIndex ? 'Correct, nice catch.' : 'Not quite, here is the reasoning.'}</p>
               <p className="text-sm leading-7 text-slate-700">{question.explanation}</p>
               <button type="button" onClick={nextQuestion} className="rounded-full bg-accent-gradient px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5">{currentIndex === quizLevel.questions.length - 1 ? 'See score summary' : 'Next question'}</button>
             </div>

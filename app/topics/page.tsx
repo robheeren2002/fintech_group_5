@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-
+import { ExpandableDayIntro } from '@/app/topics/expandable-day-info';
 import { DayNav } from '@/components/day-nav';
 import { PollCard } from '@/components/poll-card';
 import { QuizCard } from '@/components/quiz-card';
@@ -31,30 +31,37 @@ export default async function TopicsPage() {
       <DayNav days={days} />
       <div className="mx-auto mt-8 max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8">
         {days.map((day) => (
-          <section key={day.slug} id={day.slug} className="scroll-mt-40 rounded-[2.5rem] border border-white/70 bg-white/85 p-6 shadow-soft backdrop-blur md:p-8">
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div className="space-y-3">
-                <span className="inline-flex rounded-full border border-plum-200 bg-plum-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-plum-700">{day.tag}</span>
-                <div>
-                  <h2 className="text-3xl font-semibold tracking-tight text-ink">{day.title}</h2>
-                  <p className="mt-3 max-w-3xl text-base leading-8 text-slate-600">{day.intro}</p>
+            <section key={day.slug} id={day.slug}
+                     className="scroll-mt-40 rounded-[2.5rem] border border-white/70 bg-white/85 p-6 shadow-soft backdrop-blur md:p-8">
+                <div className="space-y-3">
+  <span
+      className="inline-flex rounded-full border border-plum-200 bg-plum-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-plum-700">
+    {day.tag}
+  </span>
+
+                    <div>
+                        <h2 className="text-3xl font-semibold tracking-tight text-ink">
+                            {day.title}
+                        </h2>
+
+                        <ExpandableDayIntro text={day.intro}/>
+                    </div>
                 </div>
-              </div>
-              <div className="rounded-3xl border border-plum-100 bg-mist px-4 py-3 text-sm font-medium text-slate-600">Key takeaway: <span className="font-semibold text-plum-800">{day.takeaway}</span></div>
-            </div>
-            <div className="mt-8 grid gap-6 xl:grid-cols-3">
-              {day.levels.map((level) => <QuizCard key={level.level} quizLevel={level} />)}
-            </div>
-            <div className="mt-10 space-y-4">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-plum-700">Polls & perspectives</p>
-                <h3 className="mt-2 text-2xl font-semibold text-ink">Where the debates start.</h3>
-              </div>
-              <div className="grid gap-6 xl:grid-cols-2">
-                {(pollsByDay.get(day.slug) ?? []).map((poll) => <PollCard key={poll.id} poll={poll} canVote={Boolean(user)} />)}
-              </div>
-            </div>
-          </section>
+                <div className="mt-8 grid gap-6 xl:grid-cols-3">
+                    {day.levels.map((level) => <QuizCard key={level.level} quizLevel={level}/>)}
+                </div>
+                <div className="mt-10 space-y-4">
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-plum-700">Polls &
+                            perspectives</p>
+                        <h3 className="mt-2 text-2xl font-semibold text-ink">Where the debates start.</h3>
+                    </div>
+                    <div className="grid gap-6 xl:grid-cols-2">
+                        {(pollsByDay.get(day.slug) ?? []).map((poll) => <PollCard key={poll.id} poll={poll}
+                                                                                  canVote={Boolean(user)}/>)}
+                    </div>
+                </div>
+            </section>
         ))}
       </div>
     </div>

@@ -2,7 +2,10 @@ export const siteContent = {
   title: 'The FinTech Survival Guide',
   subtitle: 'A Week That Changed Our Minds',
   intro:
-    'A creative field report from our fintech bootcamp week — part reflection journal, part learning platform, part debate arena. Built for anyone who missed the sessions but wants the big ideas, tensions, and mindset shifts that stayed with us.',
+    'This is our creative take on the field report assignment from our fintech bootcamp week. This is a' +
+      ' reflection journal, learning platform and debate arena all combined into 1 website. Built for anyone who' +
+      ' missed the sessions but wants to get to know about the big ideas, tensions, and mindset shifts that stayed' +
+      ' with us.',
   heroBullets: [
     'Trace how our thinking moved from hype to nuance.',
     'Explore quizzes that test understanding, not memorization.',
